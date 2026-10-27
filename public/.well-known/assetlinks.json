@@ -1,0 +1,5 @@
+{
+  "release_status": "placeholder_not_a_digital_asset_links_statement",
+  "message": "This file intentionally does not verify any Android application. Replace this entire object with a valid Digital Asset Links JSON array only after the release owner supplies the Android application ID and SHA-256 signing certificate fingerprint.",
+  "required_values": ["Android application ID", "SHA-256 signing certificate fingerprint"]
+}

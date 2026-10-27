@@ -12,7 +12,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->alias([
+            'admin' => \App\Http\Middleware\EnsureUserHasAdminRole::class,
+            'site.locale' => \App\Http\Middleware\SetSiteLocale::class,
+        ]);
+        $middleware->web(append: [\App\Http\Middleware\SetSiteLocale::class]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(

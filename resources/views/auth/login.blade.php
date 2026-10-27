@@ -1,0 +1,3 @@
+<x-layouts.public :title="__('site.admin_login').' | '.$siteSettings->brandName()">
+<section class="form-card narrow"><h1>{{ __('site.admin_login_heading') }}</h1><p>{{ __('site.admin_login_intro') }}</p><form method="post" action="{{ route('login.store') }}">@csrf<label>{{ __('site.email') }}<input type="email" name="email" required autofocus value="{{ old('email') }}"></label><label>{{ __('site.password') }}<input type="password" name="password" required></label><label class="check"><input type="checkbox" name="remember"> {{ __('site.remember_me') }}</label><button class="button">{{ __('site.sign_in') }}</button></form></section>
+</x-layouts.public>
